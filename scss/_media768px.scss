@@ -1,0 +1,107 @@
+@import "default";
+
+@media screen and (max-width:768px){
+
+    :root{
+        --height-shape:14em;
+    }
+
+    .hero{
+        .hero__container{
+            --padding-container: 20px 0;
+            grid-template-columns: 1fr;
+            grid-template-rows: 2fr 1fr;
+
+            .hero__texts{
+
+                .hero__title{
+                    font-size: 3.8rem;
+                }
+            }
+
+            .hero__img{
+                order: -1;
+                height: 95%;
+            }
+        }
+    }
+
+    /*======about======*/
+
+    .about{
+        grid-template-columns: 1fr;
+        grid-template-rows: max-content 1fr;
+        gap: 80px;
+
+        .about__course{
+            width: 100%;
+            
+        }
+
+        .about__picture{
+
+            .about__img{
+                width: 100%;
+            }
+        }
+    }
+
+    /*======cards=====*/
+    .card{
+        .card__container{
+            grid-template-columns: repeat(2,1fr);
+            grid-template-rows:  repeat(5,1fr);
+            gap: 20px;
+            /*========grid area=======*/
+            grid-template-areas: 
+            "card1     .  "
+            "card1   card2"
+            "card3   card2"
+            "card3   card4"
+            ".       card4";
+        }
+    }
+
+    /*====course=====*/
+
+    .course{
+        grid-template-columns: repeat(6,1fr);
+
+        .course__about{
+            grid-column: 1/6;
+        }
+
+        .course__about--left{
+            grid-column: 2/-1;
+        }
+
+        .course__picture{
+            grid-column: 2/-1;
+        }
+
+        .course__about--right{
+            grid-column: 1/6;
+        }
+    }
+
+    /*====footer=====*/
+
+    .footer{
+
+        .footer__container{
+
+            .footer__contact{
+                grid-template-columns: 1fr;
+    
+                .footer__texts{
+                    order: 1;
+                    --align-title: center;
+
+                    .footer__social{
+                        justify-content: space-evenly;
+                    }
+                }
+            }
+        }
+    }
+}

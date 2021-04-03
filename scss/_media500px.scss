@@ -1,0 +1,93 @@
+@import "default";
+
+@media screen and (max-width:500px){
+    :root{
+      --padding-btn:20px 0;  
+    }
+
+    .title{
+        font-size: 2rem;
+    }
+
+    .cta{
+        display: block;
+    }
+
+    .cta1{
+        display: block;
+    }
+
+    .hero{
+
+        .hero__container{
+            --padding-container: 45px 0;
+
+            .hero__texts{
+                text-align: center;
+
+                .hero__title{
+                    font-size: 3rem;
+                }
+
+                .hero__cta{
+                    display: block;
+                    width: 80%;
+                    margin: 0 auto;
+                }
+            }
+        }
+    }
+
+    .instructor{
+        --padding-container: 60px 0 60px;
+
+        .instructor__container{
+            width: 90%;
+        }
+    }
+
+
+    .about{
+        .about__course{
+            width: 90%;
+        }
+    }
+
+    .card{
+        .card__container{
+            width: 97%;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(4,1fr);
+            /*========grid area=======*/
+            grid-template-areas: 
+            "card1 "
+            "card2 "
+            "card3 "
+            "card4 "
+        }
+    }
+
+    .course{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        --padding-container: 80px 0 30px;
+
+        .course__about{
+            padding: 20px;
+            width: 95%;
+            grid-row: 1/-1;
+            grid-column: 1/-1;
+        }
+
+        .course__picture{
+            display: none;
+        }
+
+    }
+
+    
+    .course--modific{
+        --padding-container: 0 0 80px;
+    }
+
+}
